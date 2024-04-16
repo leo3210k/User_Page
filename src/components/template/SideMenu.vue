@@ -1,7 +1,8 @@
 <template>
   <div class="flex flex-col bg-azure-radiance">
-    <div class="">
-      <img v-for="(image_src, index) in images_src" :key="index" :src="image_src" :alt="image_src">
+    <div class="flex flex-col items-center gap-10 mt-10">
+      <img v-for="(image_src, index) in images_src" :key="index" :src="image_src" :alt="image_src"
+      class="w-10 h-10">
     </div>
     <img :src="logo" alt="logo">
   </div>
