@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <PageModel />
-  </div>
+  <PageModel />
 </template>
 
 <script>
