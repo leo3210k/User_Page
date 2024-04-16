@@ -4,9 +4,9 @@
     <div class="flex flex-col text-4xl font-bold text-black m-auto">
       <h1>Login</h1>
       <form @submit="onSubmit">
-        <FormField v-slot="{ componentField }" name="username">
+        <FormField v-slot="{ componentField }" name="email">
           <FormItem>
-            <FormLabel>Username</FormLabel>
+            <FormLabel>Email</FormLabel>
             <FormControl>
               <Input type="text" placeholder="shadcn" v-bind="componentField" />
             </FormControl>
