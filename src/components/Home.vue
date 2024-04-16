@@ -1,14 +1,14 @@
 <template>
   <div class="flex">
     <img :src="login" class="w-7/12 h-screen" alt="login-image">
-    <div class="flex flex-col text-4xl font-bold text-black mx-auto mt-48">
+    <div class="flex flex-col items-center text-4xl font-bold text-black mx-auto mt-48">
       <h1 class="mb-16">Login</h1>
       <form @submit="onSubmit">
         <FormField v-slot="{ componentField }" name="email">
           <FormItem>
             <FormLabel>Email</FormLabel>
             <FormControl>
-              <Input type="text" placeholder="shadcn" v-bind="componentField" />
+              <Input type="text" placeholder="shadcn" v-bind="componentField" class="w-96 h-12"/>
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -17,7 +17,7 @@
           <FormItem>
             <FormLabel>Senha</FormLabel>
             <FormControl>
-              <Input type="text" placeholder="shadcn" v-bind="componentField" />
+              <Input type="text" placeholder="shadcn" v-bind="componentField"  class="w-96 h-12"/>
             </FormControl>
             <FormMessage />
           </FormItem>
