@@ -1,15 +1,15 @@
 <template>
-  <Header />
-  <SideMenu />
+  <div>
+    <PageModel />
+  </div>
 </template>
 
 <script>
-import Header from '@/components/template/Header.vue'
-import SideMenu from '@/components/template/SideMenu.vue'
+import PageModel from '@/components/template/PageModel.vue'
 
 export default {
   name: "Home",
-  components: { Header, SideMenu }
+  components: { PageModel }
 }
 </script>
 
