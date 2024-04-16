@@ -19,6 +19,9 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        "lochmara": "#007AD6",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
