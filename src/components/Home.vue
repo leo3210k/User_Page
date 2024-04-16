@@ -10,9 +10,6 @@
             <FormControl>
               <Input type="text" placeholder="shadcn" v-bind="componentField" />
             </FormControl>
-            <FormDescription>
-              This is your public display name.
-            </FormDescription>
             <FormMessage />
           </FormItem>
         </FormField>
