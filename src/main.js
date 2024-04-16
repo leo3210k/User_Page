@@ -5,9 +5,11 @@ import App from './App.vue'
 import { createWebHistory, createRouter } from 'vue-router'
 
 import Login from '@/components/template/Login.vue'
+import Home from '@/components/template/Home.vue'
 
 const routes = [
   { path: '/', component: Login },
+  { path: '/home', component: Home },
 ]
 
 const router = createRouter({
