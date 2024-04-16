@@ -13,6 +13,15 @@
             <FormMessage />
           </FormItem>
         </FormField>
+        <FormField v-slot="{ componentField }" name="password">
+          <FormItem>
+            <FormLabel>Senha</FormLabel>
+            <FormControl>
+              <Input type="text" placeholder="shadcn" v-bind="componentField" />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        </FormField>
         <Button type="submit">
           Submit
         </Button>
