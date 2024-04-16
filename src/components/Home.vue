@@ -22,9 +22,12 @@
             <FormMessage />
           </FormItem>
         </FormField>
-        <Button type="submit">
-          Entrar
-        </Button>
+        <div class="flex">
+          <a href="" class="text-xl">Esqueceu a senha?</a>
+          <Button type="submit">
+            Entrar
+          </Button>
+        </div>
       </form>
     </div>
   </div>
