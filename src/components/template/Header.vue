@@ -1,5 +1,5 @@
 <template>
-  <div class="h-20 bg-lochmara">
+  <div class="h-20 flex items-center bg-lochmara px-6">
     <img :src="imageSrc" class="w-10 h-10" alt="menu-icon">
   </div>
 </template>
