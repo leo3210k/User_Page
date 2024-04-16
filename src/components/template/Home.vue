@@ -1,10 +1,13 @@
 <template>
-  Olá mundo!
+  <Header />
 </template>
 
 <script>
-export default {
+import Header from '@/components/template/Header.vue'
 
+export default {
+  name: "Home",
+  components: { Header }
 }
 </script>
 
