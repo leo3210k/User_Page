@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <img :src="imageSrc" class="w-7/12 h-screen" alt="login-image">
+    <img :src="login" class="w-7/12 h-screen" alt="login-image">
     <div class="flex flex-col text-4xl font-bold text-black m-auto">
       <h1>Login</h1>
       <form @submit="onSubmit">
