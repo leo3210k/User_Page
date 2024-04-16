@@ -2,7 +2,7 @@
   <div class="flex">
     <img :src="login" class="w-7/12 h-screen" alt="login-image">
     <div class="flex flex-col items-center text-4xl font-bold text-black mx-auto mt-48">
-      <h1 class="mb-16">Login</h1>
+      <h1 class="mb-14">Login</h1>
       <form @submit="onSubmit">
         <FormField v-slot="{ componentField }" name="email">
           <FormItem>
