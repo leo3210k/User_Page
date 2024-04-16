@@ -23,7 +23,7 @@
           </FormItem>
         </FormField>
         <Button type="submit">
-          Submit
+          Entrar
         </Button>
       </form>
     </div>
