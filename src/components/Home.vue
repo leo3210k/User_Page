@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
     <img :src="login" class="w-7/12 h-screen" alt="login-image">
-    <div class="flex flex-col items-center text-4xl font-bold text-black mx-auto mt-48">
+    <div class="relative w-5/12 flex flex-col items-center text-4xl font-bold text-black mx-auto mt-48">
       <h1 class="mb-16">Login</h1>
       <form @submit="onSubmit">
         <FormField v-slot="{ componentField }" name="email">
@@ -29,12 +29,14 @@
           </Button>
         </div>
       </form>
+      <img :src="loginBackground" class="absolute bottom-0 inset-x-0" alt="login-background">
     </div>
   </div>
 </template>
 
 <script setup>
 import login from '@/assets/images/login-image.png'
+import loginBackground from '@/assets/images/login-background.png'
 import { toTypedSchema } from '@vee-validate/zod'
 import * as z from 'zod'
 import { useForm } from 'vee-validate'
