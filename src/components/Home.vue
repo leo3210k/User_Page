@@ -6,7 +6,7 @@
       <form @submit="onSubmit">
         <FormField v-slot="{ componentField }" name="email">
           <FormItem>
-            <FormLabel>Email</FormLabel>
+            <FormLabel class="font-black">Email</FormLabel>
             <FormControl>
               <Input type="text" placeholder="shadcn" v-bind="componentField" class="w-[30rem] h-12"/>
             </FormControl>
@@ -15,7 +15,7 @@
         </FormField>
         <FormField v-slot="{ componentField }" name="password">
           <FormItem>
-            <FormLabel>Senha</FormLabel>
+            <FormLabel class="font-black">Senha</FormLabel>
             <FormControl>
               <Input type="text" placeholder="shadcn" v-bind="componentField"  class="w-[30rem] h-12"/>
             </FormControl>
@@ -24,7 +24,7 @@
         </FormField>
         <div class="flex justify-between items-center mt-10">
           <a href="" class="text-xl">Esqueceu a senha?</a>
-          <Button type="submit" class="h-16 px-20">
+          <Button type="submit" class="h-16 px-20 font-bold">
             Entrar
           </Button>
         </div>
