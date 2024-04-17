@@ -1,6 +1,6 @@
 <template>
   <PageModel>
-    <div class="flex flex-wrap gap-6">
+    <div class="flex flex-wrap gap-6 m-32">
       <div v-for="(image, index) in images" :key="index"
       class="w-20 h-20 bg-azure-radiance-darker rounded">
         <img :src="image.src" :alt="image.src" class="w-10 h-10">
