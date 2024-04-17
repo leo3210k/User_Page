@@ -1,6 +1,6 @@
 <template>
   <PageModel>
-    <div>
+    <div class="m-10">
       <span class="text-black text-xl font-medium">Usuários</span>
     </div>
   </PageModel>
