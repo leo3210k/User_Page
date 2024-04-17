@@ -3,7 +3,7 @@
     <div class="flex flex-wrap gap-6 m-32">
       <div v-for="(image, index) in images" :key="index"
       class="w-36 h-36 bg-azure-radiance-darker rounded">
-        <img :src="image.src" :alt="image.src" class="w-10 h-10">
+        <img :src="image.src" :alt="image.src" class="w-14 h-14">
       </div>
     </div>
   </PageModel>
