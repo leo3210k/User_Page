@@ -1,5 +1,9 @@
 <template>
-  <PageModel />
+  <PageModel>
+    <div>
+      <span class="text-black text-xl font-medium">Usuários</span>
+    </div>
+  </PageModel>
 </template>
 
 <script>
