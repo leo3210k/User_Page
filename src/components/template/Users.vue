@@ -1,7 +1,10 @@
 <template>
   <PageModel>
     <div class="m-10">
-      <span class="text-black text-xl font-medium">Usuários</span>
+      <div class="flex">
+        <span class="text-black text-2xl font-medium">Usuários</span>
+        <div class="w-10 h-10 flex justify-center items-center text-4xl bg-azure-radiance-darker text-white rounded-md">+</div>
+      </div>
     </div>
   </PageModel>
 </template>
