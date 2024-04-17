@@ -2,6 +2,7 @@
   <div class="h-svh grid grid-rows-[5rem_1fr] grid-cols-[5.5rem_1fr]">
     <Header />
     <SideMenu />
+    <slot></slot>
   </div>
 </template>
 
