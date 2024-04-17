@@ -1,7 +1,8 @@
 <template>
   <PageModel>
     <div class="flex flex-wrap gap-6">
-      <div v-for="(image_src, index) in images_src" :key="index">
+      <div v-for="(image_src, index) in images_src" :key="index"
+      class="">
         <img :src="image_src" :alt="image_src" class="w-10 h-10">
       </div>
     </div>
@@ -28,16 +29,16 @@ export default {
   data() {
     return {
       images_src: [
-        config,
-        holidays,
-        logs,
-        messages,
-        permissions,
-        reason,
-        reports,
-        segments,
-        users,
-        versions,
+        { src: config, label: 'Configuração' },
+        { src: users, label: 'Usuários' },
+        { src: permissions, label: 'Permissões' },
+        { src: reason, label: 'Motivo de cancelamento' },
+        { src: logs, label: 'Logs' },
+        { src: segments, label: 'Segmentos' },
+        { src: versions, label: 'Versões' },
+        { src: holidays, label: 'Feriados' },
+        { src: reports, label: 'Laudos' },
+        { src: messages, label: 'Mensagens pré-definidas' },
       ],
     }
   }
