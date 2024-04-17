@@ -21,7 +21,8 @@ module.exports = {
     extend: {
       colors: {
         "lochmara": "#007AD6",
-        "azure-radiance": "#0091FF"
+        "azure-radiance": "#0091FF",
+        "azure-radiance-darker": "#0077FF"
       },
       keyframes: {
         "accordion-down": {
