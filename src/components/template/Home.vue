@@ -4,6 +4,7 @@
       <div v-for="(image, index) in images" :key="index"
       class="w-36 h-36 flex flex-col justify-center items-center bg-azure-radiance-darker rounded">
         <img :src="image.src" :alt="image.src" class="w-14 h-14">
+        <span>{{ image.label }}</span>
       </div>
     </div>
   </PageModel>
