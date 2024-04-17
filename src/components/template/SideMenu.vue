@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-between items-center bg-azure-radiance py-10">
+  <div class="flex flex-col justify-between items-center bg-azure-radiance py-6">
     <div class="flex flex-col items-center gap-10">
       <img v-for="(image_src, index) in images_src" :key="index" :src="image_src" :alt="image_src"
       class="w-10 h-10">
