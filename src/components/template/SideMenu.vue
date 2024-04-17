@@ -4,7 +4,7 @@
       <img v-for="(image_src, index) in images_src" :key="index" :src="image_src" :alt="image_src"
       class="w-10 h-10">
     </div>
-    <img :src="logo" class="w-10 h-10" alt="logo">
+    <img :src="logo" class="w-16 h-16" alt="logo">
   </div>
 </template>
 
