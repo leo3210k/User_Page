@@ -1,9 +1,9 @@
 <template>
   <PageModel>
     <div class="flex flex-wrap gap-6">
-      <div v-for="(image_src, index) in images_src" :key="index"
-      class="">
-        <img :src="image_src" :alt="image_src" class="w-10 h-10">
+      <div v-for="(image, index) in images" :key="index"
+      class="w-20 h-20 bg-azure-radiance-darker rounded">
+        <img :src="image.src" :alt="image.src" class="w-10 h-10">
       </div>
     </div>
   </PageModel>
@@ -28,7 +28,7 @@ export default {
   components: { PageModel },
   data() {
     return {
-      images_src: [
+      images: [
         { src: config, label: 'Configuração' },
         { src: users, label: 'Usuários' },
         { src: permissions, label: 'Permissões' },
