@@ -498,6 +498,30 @@
               </FormItem>
             </FormField>
           </div>
+          <div>
+            <span class="text-black text-lg font-medium">Contato</span>
+            <hr class="mt-2">
+          </div>
+          <div class="flex basis-auto justify-between items-center gap-4">
+            <FormField v-slot="{ componentField }" name="phone">
+              <FormItem class="w-full">
+                <FormLabel class="text-gray-500">Telefone</FormLabel>
+                <FormControl>
+                  <Input type="text" class="h-12 text-black" v-bind="componentField" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            </FormField>
+            <FormField v-slot="{ componentField }" name="email">
+              <FormItem class="w-full">
+                <FormLabel class="text-gray-500">Email</FormLabel>
+                <FormControl>
+                  <Input type="text" class="h-12 text-black" v-bind="componentField" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            </FormField>
+          </div>
           <Button type="submit">
             Submit
           </Button>
