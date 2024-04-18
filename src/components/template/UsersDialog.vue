@@ -144,52 +144,54 @@
           <span class="text-black text-lg font-medium">Dados Complementares</span>
           <hr class="mt-2">
         </div>
-        <div class="w-full flex basis-auto justify-between items-center gap-4">
-          <FormField v-slot="{ componentField }" name="profile">
-            <FormItem class="w-full">
-              <FormLabel class="text-gray-500">Perfil</FormLabel>
-              <Select v-bind="componentField">
-                <SelectTrigger class="h-12 text-black mt-[9px]">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectItem value="single">
-                      Solteiro(a)
-                    </SelectItem>
-                    <SelectItem value="married">
-                      Casado(a)
-                    </SelectItem>
-                    <SelectItem value="divorced">
-                      Divorciado(a)
-                    </SelectItem>
-                    <SelectItem value="stable_union">
-                      União Estável
-                    </SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
-              <FormMessage />
-            </FormItem>
-          </FormField>
-          <FormField v-slot="{ componentField }" name="function">
-            <FormItem class="w-full">
-              <FormLabel class="text-gray-500">Função</FormLabel>
-              <FormControl>
-                <Input type="text" class="h-12 text-black" v-bind="componentField" />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          </FormField>
-          <FormField v-slot="{ componentField }" name="place_of_birth">
-            <FormItem class="w-full">
-              <FormLabel class="text-gray-500">Apelido</FormLabel>
-              <FormControl>
-                <Input type="text" class="h-12 text-black" v-bind="componentField" />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          </FormField>
+        <div class="w-full">
+          <div class="flex basis-auto justify-between items-center gap-4">
+            <FormField v-slot="{ componentField }" name="profile">
+              <FormItem class="w-full">
+                <FormLabel class="text-gray-500">Perfil</FormLabel>
+                <Select v-bind="componentField">
+                  <SelectTrigger class="h-12 text-black mt-[9px]">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectItem value="single">
+                        Solteiro(a)
+                      </SelectItem>
+                      <SelectItem value="married">
+                        Casado(a)
+                      </SelectItem>
+                      <SelectItem value="divorced">
+                        Divorciado(a)
+                      </SelectItem>
+                      <SelectItem value="stable_union">
+                        União Estável
+                      </SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            </FormField>
+            <FormField v-slot="{ componentField }" name="function">
+              <FormItem class="w-full">
+                <FormLabel class="text-gray-500">Função</FormLabel>
+                <FormControl>
+                  <Input type="text" class="h-12 text-black" v-bind="componentField" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            </FormField>
+            <FormField v-slot="{ componentField }" name="place_of_birth">
+              <FormItem class="w-full">
+                <FormLabel class="text-gray-500">Naturalidade</FormLabel>
+                <FormControl>
+                  <Input type="text" class="h-12 text-black" v-bind="componentField" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            </FormField>
+          </div>
         </div>
         <Button type="submit">
           Submit
