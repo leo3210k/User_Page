@@ -6,8 +6,8 @@
       </Button>
     </DialogTrigger>
     <DialogContent class="sm:max-w-md">
-      <DialogHeader>
-        <DialogTitle class="text-black">Share link</DialogTitle>
+      <DialogHeader class="w-full p-4 bg-azure-radiance-darker">
+        <DialogTitle>Novo Usuário</DialogTitle>
       </DialogHeader>
     </DialogContent>
   </Dialog>
