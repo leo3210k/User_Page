@@ -88,16 +88,49 @@
               <FormMessage />
             </FormItem>
           </FormField>
-          <FormField v-slot="{ componentField }" name="father_name">
+          <FormField name="dob">
             <FormItem class="w-full">
               <FormLabel class="text-gray-500">Data de Nascimento</FormLabel>
-              <FormControl>
-                <Input type="text" class="h-12 text-black" v-bind="componentField" />
-              </FormControl>
+              <Popover>
+                <PopoverTrigger as-child>
+                  <FormControl>
+                    <Button
+                      class="w-full bg-white text-black hover:bg-white border"
+                    >
+                      <span>{{ value ? df.format(toDate(value)) : "Pick a date" }}</span>
+                      <CalendarIcon class="ms-auto h-4 w-4 opacity-50" />
+                    </Button>
+                    <input hidden>
+                  </FormControl>
+                </PopoverTrigger>
+                <PopoverContent class="w-auto p-0">
+                  <Calendar
+                    v-model:placeholder="placeholder"
+                    v-model="value"
+                    calendar-label="Date of birth"
+                    initial-focus
+                    :min-value="new CalendarDate(1900, 1, 1)"
+                    :max-value="today(getLocalTimeZone())"
+                    @update:model-value="(v) => {
+                      if (v) {
+                        setValues({
+                          dob: v.toString(),
+                        })
+                      }
+                      else {
+                        setValues({
+                          dob: '',
+                        })
+                      }
+
+                    }"
+                  />
+                </PopoverContent>
+              </Popover>
               <FormMessage />
             </FormItem>
           </FormField>
-          <FormField v-slot="{ componentField }" name="father_name">
+          <FormField v-slot="{ componentField }" name="surname">
               <FormItem class="w-full">
                 <FormLabel class="text-gray-500">Apelido</FormLabel>
                 <FormControl>
@@ -110,6 +143,53 @@
         <div>
           <span class="text-black text-lg font-medium">Dados Complementares</span>
           <hr class="mt-2">
+        </div>
+        <div class="w-full flex basis-auto justify-between items-center gap-4">
+          <FormField v-slot="{ componentField }" name="profile">
+            <FormItem class="w-full">
+              <FormLabel class="text-gray-500">Perfil</FormLabel>
+              <Select v-bind="componentField">
+                <SelectTrigger class="h-12 text-black mt-[9px]">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectItem value="single">
+                      Solteiro(a)
+                    </SelectItem>
+                    <SelectItem value="married">
+                      Casado(a)
+                    </SelectItem>
+                    <SelectItem value="divorced">
+                      Divorciado(a)
+                    </SelectItem>
+                    <SelectItem value="stable_union">
+                      União Estável
+                    </SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+              <FormMessage />
+            </FormItem>
+          </FormField>
+          <FormField v-slot="{ componentField }" name="function">
+            <FormItem class="w-full">
+              <FormLabel class="text-gray-500">Função</FormLabel>
+              <FormControl>
+                <Input type="text" class="h-12 text-black" v-bind="componentField" />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          </FormField>
+          <FormField v-slot="{ componentField }" name="place_of_birth">
+            <FormItem class="w-full">
+              <FormLabel class="text-gray-500">Apelido</FormLabel>
+              <FormControl>
+                <Input type="text" class="h-12 text-black" v-bind="componentField" />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          </FormField>
         </div>
         <Button type="submit">
           Submit
@@ -153,15 +233,16 @@ import { toDate } from 'radix-vue/date'
 import { Calendar as CalendarIcon } from 'lucide-vue-next'
 import { useForm } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/zod'
-import * as z from 'zod'
+import { z } from 'zod'
 import { Calendar } from '@/components/ui/calendar'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { Input } from '@/components/ui/input'
+import { cn } from '@/lib/utils'
 import camera from '@/assets/svg/users-dialog/camera.svg'
 
 const cameraSrc = camera
 
-const df = new DateFormatter('en-US', {
+const df = new DateFormatter('pt-BR', {
   dateStyle: 'long',
 })
 
@@ -174,8 +255,11 @@ const formSchema = toTypedSchema(z.object({
 
 const placeholder = ref()
 
-const form = useForm({
+const { handleSubmit, setValues, values } = useForm({
   validationSchema: formSchema,
+  initialValues: {
+
+  },
 })
 
 const value = computed({
@@ -183,8 +267,7 @@ const value = computed({
   set: val => val,
 })
 
-const onSubmit = form.handleSubmit((values) => {
-  console.log('Form submitted!', values)
+const onSubmit = handleSubmit((values) => {
 })
 </script>
 
