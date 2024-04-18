@@ -202,6 +202,50 @@
             </FormItem>
           </FormField>
         </div>
+        <div>
+          <span class="text-black text-lg font-medium">Horário de Trabalho</span>
+          <hr class="mt-2">
+        </div>
+        <div class="flex justify-between">
+          <div class="flex">
+            <FormField v-slot="{ componentField }" name="surname">
+              <FormItem class="w-full">
+                <FormLabel class="text-gray-500">Apelido</FormLabel>
+                <FormControl>
+                  <VueDatePicker v-model="time" time-picker disable-time-range-validation ref="dp" placeholder="Select Time">
+                    <template #action-buttons>
+                      <p class="bg-azure-radiance-darker text-white p-2 rounded-md cursor-pointer" @click="selectDate">Selecionar</p>
+                    </template>
+                  </VueDatePicker>  
+                </FormControl>
+              </FormItem>
+            </FormField>
+            <FormField v-slot="{ componentField }" name="surname">
+              <FormItem class="w-full">
+                <FormLabel class="text-gray-500">Apelido</FormLabel>
+                <FormControl>
+                  <VueDatePicker v-model="time" time-picker disable-time-range-validation ref="dp" placeholder="Select Time">
+                    <template #action-buttons>
+                      <p class="bg-azure-radiance-darker text-white p-2 rounded-md cursor-pointer" @click="selectDate">Selecionar</p>
+                    </template>
+                  </VueDatePicker>
+                </FormControl>
+              </FormItem>
+            </FormField>
+          </div>
+          <div>
+            <VueDatePicker v-model="time" time-picker disable-time-range-validation ref="dp" placeholder="Select Time">
+              <template #action-buttons>
+                <p class="bg-azure-radiance-darker text-white p-2 rounded-md cursor-pointer" @click="selectDate">Selecionar</p>
+              </template>
+            </VueDatePicker>  
+            <VueDatePicker v-model="time" time-picker disable-time-range-validation ref="dp" placeholder="Select Time">
+              <template #action-buttons>
+                <p class="bg-azure-radiance-darker text-white p-2 rounded-md cursor-pointer" @click="selectDate">Selecionar</p>
+              </template>
+            </VueDatePicker>
+          </div>
+        </div>
         <Button type="submit">
           Submit
         </Button>
@@ -249,6 +293,8 @@ import { Calendar } from '@/components/ui/calendar'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { Input } from '@/components/ui/input'
 import { cn } from '@/lib/utils'
+import VueDatePicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css'
 import camera from '@/assets/svg/users-dialog/camera.svg'
 
 const cameraSrc = camera
@@ -265,6 +311,12 @@ const formSchema = toTypedSchema(z.object({
 }))
 
 const placeholder = ref()
+const time = ref();
+const dp = ref();
+
+const selectDate = () => {
+  dp.value.selectDate();
+}
 
 const { handleSubmit, setValues, values } = useForm({
   validationSchema: formSchema,
