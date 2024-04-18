@@ -9,7 +9,7 @@
       <DialogHeader class="w-full bg-azure-radiance rounded-lg p-4">
         <DialogTitle class="font-medium text-lg text-white">Novo Usuário</DialogTitle>
       </DialogHeader>
-      <form @submit="onSubmit" class="flex flex-col gap-4">
+      <form @submit="onSubmit" class="flex flex-col gap-6">
         <div>
           <span class="text-black text-lg font-medium">Dados Básicos</span>
           <hr class="mt-2">
@@ -104,8 +104,10 @@
               </FormItem>
             </FormField>
         </div>
-        <span class="text-black text-lg font-medium">Dados Complementares</span>
-        <hr>
+        <div>
+          <span class="text-black text-lg font-medium">Dados Básicos</span>
+          <hr class="mt-2">
+        </div>
         <Button type="submit">
           Submit
         </Button>
@@ -142,10 +144,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { Input } from '@/components/ui/input'
+import { computed, h, ref } from 'vue'
+import { CalendarDate, DateFormatter, getLocalTimeZone, parseDate, today } from '@internationalized/date'
+import { toDate } from 'radix-vue/date'
+import { Calendar as CalendarIcon } from 'lucide-vue-next'
+import { useForm } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/zod'
 import * as z from 'zod'
-import { useForm } from 'vee-validate'
+import { Calendar } from '@/components/ui/calendar'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
+import { Input } from '@/components/ui/input'
 import camera from '@/assets/svg/users-dialog/camera.svg'
 
 const cameraSrc = camera
