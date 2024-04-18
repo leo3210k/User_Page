@@ -14,12 +14,12 @@
       <form @submit="onSubmit">
         <div class="flex gap-24">
           <div class="relative">
-            <div class="w-52 h-52 bg-gray-300 rounded-full"></div>
+            <div class="w-72 h-72 bg-gray-300 rounded-full"></div>
             <div class="absolute right-0 bottom-1 w-20 h-20 flex justify-center items-center bg-azure-radiance-darker rounded-full">
               <img :src="cameraSrc" class="w-10 h-10" :alt="camera">
             </div>
           </div>
-          <div class="flex flex-col gap-2">
+          <div class="w-full flex flex-col gap-2">
             <FormField v-slot="{ componentField }" name="name">
               <FormItem>
                 <FormLabel class="text-gray-500">Nome</FormLabel>
