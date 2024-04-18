@@ -20,9 +20,27 @@
             </div>
           </div>
           <div>
-            <FormField v-slot="{ componentField }" name="username">
+            <FormField v-slot="{ componentField }" name="name">
               <FormItem>
                 <FormLabel class="text-gray-500">Nome</FormLabel>
+                <FormControl>
+                  <Input type="text" class="w-[30rem]" placeholder="shadcn" v-bind="componentField" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            </FormField>
+            <FormField v-slot="{ componentField }" name="mother_name">
+              <FormItem>
+                <FormLabel class="text-gray-500">Nome da Mãe</FormLabel>
+                <FormControl>
+                  <Input type="text" class="w-[30rem]" placeholder="shadcn" v-bind="componentField" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            </FormField>
+            <FormField v-slot="{ componentField }" name="father_name">
+              <FormItem>
+                <FormLabel class="text-gray-500">Nome do Pai</FormLabel>
                 <FormControl>
                   <Input type="text" class="w-[30rem]" placeholder="shadcn" v-bind="componentField" />
                 </FormControl>
