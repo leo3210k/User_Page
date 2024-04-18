@@ -19,7 +19,7 @@
               <img :src="cameraSrc" class="w-10 h-10" :alt="camera">
             </div>
           </div>
-          <div>
+          <div class="flex flex-col gap-2">
             <FormField v-slot="{ componentField }" name="name">
               <FormItem>
                 <FormLabel class="text-gray-500">Nome</FormLabel>
