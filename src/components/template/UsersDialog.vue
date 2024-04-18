@@ -144,7 +144,7 @@
           <span class="text-black text-lg font-medium">Dados Complementares</span>
           <hr class="mt-2">
         </div>
-        <div class="w-full">
+        <div class="w-full flex flex-col gap-4">
           <div class="flex basis-auto justify-between items-center gap-4">
             <FormField v-slot="{ componentField }" name="profile">
               <FormItem class="w-full">
@@ -192,6 +192,15 @@
               </FormItem>
             </FormField>
           </div>
+          <FormField v-slot="{ componentField }" name="pix">
+            <FormItem class="w-6/12">
+              <FormLabel class="text-gray-500">Chave PIX</FormLabel>
+              <FormControl>
+                <Input type="text" class="h-12 text-black" v-bind="componentField" />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          </FormField>
         </div>
         <Button type="submit">
           Submit
