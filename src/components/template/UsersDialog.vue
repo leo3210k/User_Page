@@ -15,7 +15,7 @@
         <div class="flex gap-24">
           <div class="relative">
             <div class="w-52 h-52 bg-gray-300 rounded-full"></div>
-            <div class="absolute right-0 bottom-1 w-20 h-20 flex justify-center items-center bg-azure-radiance rounded-full">
+            <div class="absolute right-0 bottom-1 w-20 h-20 flex justify-center items-center bg-azure-radiance-darker rounded-full">
               <img :src="cameraSrc" class="w-10 h-10" :alt="camera">
             </div>
           </div>
