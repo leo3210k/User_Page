@@ -22,13 +22,10 @@
           <div>
             <FormField v-slot="{ componentField }" name="username">
               <FormItem>
-                <FormLabel>Username</FormLabel>
+                <FormLabel class="text-gray-500">Nome</FormLabel>
                 <FormControl>
-                  <Input type="text" placeholder="shadcn" v-bind="componentField" />
+                  <Input type="text" class="w-[30rem]" placeholder="shadcn" v-bind="componentField" />
                 </FormControl>
-                <FormDescription>
-                  This is your public display name.
-                </FormDescription>
                 <FormMessage />
               </FormItem>
             </FormField>
