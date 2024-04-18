@@ -14,7 +14,7 @@
       <form @submit="onSubmit">
         <div class="flex gap-24 mb-6">
           <div class="relative">
-            <div class="w-72 h-72 bg-gray-300 rounded-full"></div>
+            <div class="w-64 h-64 bg-gray-300 rounded-full"></div>
             <div class="absolute right-0 bottom-1 w-20 h-20 flex justify-center items-center bg-azure-radiance-darker rounded-full">
               <img :src="cameraSrc" class="w-10 h-10" :alt="camera">
             </div>
@@ -24,7 +24,7 @@
               <FormItem>
                 <FormLabel class="text-gray-500">Nome</FormLabel>
                 <FormControl>
-                  <Input type="text" class="w-full h-14" v-bind="componentField" />
+                  <Input type="text" class="w-full h-12" v-bind="componentField" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -33,7 +33,7 @@
               <FormItem>
                 <FormLabel class="text-gray-500">Nome da Mãe</FormLabel>
                 <FormControl>
-                  <Input type="text" class="w-full h-14" v-bind="componentField" />
+                  <Input type="text" class="w-full h-12" v-bind="componentField" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -42,7 +42,7 @@
               <FormItem>
                 <FormLabel class="text-gray-500">Nome do Pai</FormLabel>
                 <FormControl>
-                  <Input type="text" class="w-full h-14" v-bind="componentField" />
+                  <Input type="text" class="w-full h-12" v-bind="componentField" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
