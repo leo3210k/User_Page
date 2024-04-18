@@ -262,6 +262,124 @@
                 </FormField>
               </div>
             </div>
+            <div>
+              <span class="text-black text-lg font-medium">Documentos</span>
+              <hr class="mt-2">
+            </div>
+            <div class="flex basis-auto justify-between items-center gap-4">
+              <FormField v-slot="{ componentField }" name="id">
+                <FormItem class="w-full">
+                  <FormLabel class="text-gray-500">Numero identidade</FormLabel>
+                  <FormControl>
+                    <Input type="text" class="h-12 text-black" v-bind="componentField" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              </FormField>
+              <FormField v-slot="{ componentField }" name="UF_identity">
+                <FormItem class="w-full">
+                  <FormLabel class="text-gray-500">Orgão emissor identidade</FormLabel>
+                  <FormControl>
+                    <Input type="text" class="h-12 text-black" v-bind="componentField" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              </FormField>
+              <FormField v-slot="{ componentField }" name="id_UF">
+                <FormItem class="w-full">
+                  <FormLabel class="text-gray-500">UF identidade</FormLabel>
+                  <Select v-bind="componentField">
+                    <SelectTrigger class="h-12 text-black mt-[9px]">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectGroup>
+                        <SelectItem value="single">
+                          Solteiro(a)
+                        </SelectItem>
+                        <SelectItem value="married">
+                          Casado(a)
+                        </SelectItem>
+                        <SelectItem value="divorced">
+                          Divorciado(a)
+                        </SelectItem>
+                        <SelectItem value="stable_union">
+                          União Estável
+                        </SelectItem>
+                      </SelectGroup>
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              </FormField>
+            </div>
+            <div class="flex basis-auto justify-between items-center gap-4">
+              <FormField v-slot="{ componentField }" name="voter_title">
+                <FormItem class="w-full">
+                  <FormLabel class="text-gray-500">Título de eleitor</FormLabel>
+                  <FormControl>
+                    <Input type="text" class="h-12 text-black" v-bind="componentField" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              </FormField>
+              <FormField v-slot="{ componentField }" name="title_section">
+                <FormItem class="w-full">
+                  <FormLabel class="text-gray-500">Seção do título</FormLabel>
+                  <FormControl>
+                    <Input type="text" class="h-12 text-black" v-bind="componentField" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              </FormField>
+              <FormField v-slot="{ componentField }" name="title_zone">
+                <FormItem class="w-full">
+                  <FormLabel class="text-gray-500">Zona do título</FormLabel>
+                  <FormControl>
+                    <Input type="text" class="h-12 text-black" v-bind="componentField" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              </FormField>
+            </div>
+            <div class="flex basis-auto justify-between items-center gap-4">
+              <FormField v-slot="{ componentField }" name="work_card">
+                <FormItem class="w-full">
+                  <FormLabel class="text-gray-500">Carteira de Trabalho</FormLabel>
+                  <FormControl>
+                    <Input type="text" class="h-12 text-black" v-bind="componentField" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              </FormField>
+              <FormField v-slot="{ componentField }" name="card_series">
+                <FormItem class="w-full">
+                  <FormLabel class="text-gray-500">Série da carteira</FormLabel>
+                  <FormControl>
+                    <Input type="text" class="h-12 text-black" v-bind="componentField" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              </FormField>
+              <FormField v-slot="{ componentField }" name="card_date">
+                <FormItem class="w-full">
+                  <FormLabel class="text-gray-500">Data da emissão da carteira</FormLabel>
+                  <FormControl>
+                    <Input type="text" class="h-12 text-black" v-bind="componentField" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              </FormField>
+              <FormField v-slot="{ componentField }" name="card_UF">
+                <FormItem class="w-full">
+                  <FormLabel class="text-gray-500">UF da carteira</FormLabel>
+                  <FormControl>
+                    <Input type="text" class="h-12 text-black" v-bind="componentField" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              </FormField>
+            </div>
             <Button type="submit">
               Submit
             </Button>
