@@ -12,18 +12,26 @@
       <span class="text-black text-lg font-medium">Dados Básicos</span>
       <hr>
       <form @submit="onSubmit">
-        <FormField v-slot="{ componentField }" name="username">
-          <FormItem>
-            <FormLabel>Username</FormLabel>
-            <FormControl>
-              <Input type="text" placeholder="shadcn" v-bind="componentField" />
-            </FormControl>
-            <FormDescription>
-              This is your public display name.
-            </FormDescription>
-            <FormMessage />
-          </FormItem>
-        </FormField>
+        <div class="flex">
+          <div>
+            <div></div>
+            <img src="" alt="">
+          </div>
+          <div>
+            <FormField v-slot="{ componentField }" name="username">
+              <FormItem>
+                <FormLabel>Username</FormLabel>
+                <FormControl>
+                  <Input type="text" placeholder="shadcn" v-bind="componentField" />
+                </FormControl>
+                <FormDescription>
+                  This is your public display name.
+                </FormDescription>
+                <FormMessage />
+              </FormItem>
+            </FormField>
+          </div>
+        </div>
         <Button type="submit">
           Submit
         </Button>
