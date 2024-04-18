@@ -9,6 +9,8 @@
       <DialogHeader class="w-full p-4 bg-azure-radiance-darker rounded-lg">
         <DialogTitle>Novo Usuário</DialogTitle>
       </DialogHeader>
+      <span>Dados Básicos</span>
+      <hr>
       <form @submit="onSubmit">
         <FormField v-slot="{ componentField }" name="username">
           <FormItem>
