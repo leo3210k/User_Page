@@ -52,36 +52,36 @@
         <div class="w-full flex justify-between gap-4">
           <FormField v-slot="{ componentField }" name="father_name">
               <FormItem>
-                <FormLabel class="text-gray-500">Nome do Pai</FormLabel>
+                <FormLabel class="text-gray-500">CPF</FormLabel>
                 <FormControl>
-                  <Input type="text" class="w-full" v-bind="componentField" />
+                  <Input type="text" class="w-full h-12 text-black" v-bind="componentField" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             </FormField>
             <FormField v-slot="{ componentField }" name="father_name">
               <FormItem>
-                <FormLabel class="text-gray-500">Nome do Pai</FormLabel>
+                <FormLabel class="text-gray-500">Estado Civil</FormLabel>
                 <FormControl>
-                  <Input type="text" class="w-full" v-bind="componentField" />
+                  <Input type="text" class="w-full h-12 text-black" v-bind="componentField" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             </FormField>
             <FormField v-slot="{ componentField }" name="father_name">
               <FormItem>
-                <FormLabel class="text-gray-500">Nome do Pai</FormLabel>
+                <FormLabel class="text-gray-500">Data de Nascimento</FormLabel>
                 <FormControl>
-                  <Input type="text" class="w-full" v-bind="componentField" />
+                  <Input type="text" class="w-full h-12 text-black" v-bind="componentField" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             </FormField>
             <FormField v-slot="{ componentField }" name="father_name">
               <FormItem>
-                <FormLabel class="text-gray-500">Nome do Pai</FormLabel>
+                <FormLabel class="text-gray-500">Apelido</FormLabel>
                 <FormControl>
-                  <Input type="text" class="w-full" v-bind="componentField" />
+                  <Input type="text" class="w-full h-12 text-black" v-bind="componentField" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
