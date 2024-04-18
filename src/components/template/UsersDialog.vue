@@ -102,6 +102,8 @@
               </FormItem>
             </FormField>
         </div>
+        <span class="text-black text-lg font-medium">Dados Complementares</span>
+        <hr>
         <Button type="submit">
           Submit
         </Button>
