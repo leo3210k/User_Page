@@ -52,49 +52,52 @@
           </div>
         </div>
         <div class="w-full flex basis-auto justify-between items-center gap-4">
-          <FormField v-slot="{ componentField }" name="father_name">
-              <FormItem class="w-full">
-                <FormLabel class="text-gray-500">CPF</FormLabel>
-                <FormControl>
-                  <Input type="text" class="h-12 text-black" v-bind="componentField" />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            </FormField>
-            <Select>
-              <div class="w-full">
-                <Label class="text-gray-500 text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-gray-500" for="email">Estado Civil</Label>
+          <FormField v-slot="{ componentField }" name="cpf">
+            <FormItem class="w-full">
+              <FormLabel class="text-gray-500">CPF</FormLabel>
+              <FormControl>
+                <Input type="text" class="h-12 text-black" v-bind="componentField" />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          </FormField>
+          <FormField v-slot="{ componentField }" name="marital_status">
+            <FormItem class="w-full">
+              <FormLabel class="text-gray-500">Estado Civil</FormLabel>
+              <Select v-bind="componentField">
                 <SelectTrigger class="h-12 text-black mt-[9px]">
                   <SelectValue />
                 </SelectTrigger>
-              </div>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectItem value="single">
-                    Solteiro(a)
-                  </SelectItem>
-                  <SelectItem value="married">
-                    Casado(a)
-                  </SelectItem>
-                  <SelectItem value="divorced">
-                    Divorciado(a)
-                  </SelectItem>
-                  <SelectItem value="stable_union">
-                    União Estável
-                  </SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-            <FormField v-slot="{ componentField }" name="father_name">
-              <FormItem class="w-full">
-                <FormLabel class="text-gray-500">Data de Nascimento</FormLabel>
-                <FormControl>
-                  <Input type="text" class="h-12 text-black" v-bind="componentField" />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            </FormField>
-            <FormField v-slot="{ componentField }" name="father_name">
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectItem value="single">
+                      Solteiro(a)
+                    </SelectItem>
+                    <SelectItem value="married">
+                      Casado(a)
+                    </SelectItem>
+                    <SelectItem value="divorced">
+                      Divorciado(a)
+                    </SelectItem>
+                    <SelectItem value="stable_union">
+                      União Estável
+                    </SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+              <FormMessage />
+            </FormItem>
+          </FormField>
+          <FormField v-slot="{ componentField }" name="father_name">
+            <FormItem class="w-full">
+              <FormLabel class="text-gray-500">Data de Nascimento</FormLabel>
+              <FormControl>
+                <Input type="text" class="h-12 text-black" v-bind="componentField" />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          </FormField>
+          <FormField v-slot="{ componentField }" name="father_name">
               <FormItem class="w-full">
                 <FormLabel class="text-gray-500">Apelido</FormLabel>
                 <FormControl>
@@ -102,10 +105,10 @@
                 </FormControl>
                 <FormMessage />
               </FormItem>
-            </FormField>
+          </FormField>
         </div>
         <div>
-          <span class="text-black text-lg font-medium">Dados Básicos</span>
+          <span class="text-black text-lg font-medium">Dados Complementares</span>
           <hr class="mt-2">
         </div>
         <Button type="submit">
