@@ -158,12 +158,26 @@ import camera from '@/assets/svg/users-dialog/camera.svg'
 
 const cameraSrc = camera
 
+const df = new DateFormatter('en-US', {
+  dateStyle: 'long',
+})
+
 const formSchema = toTypedSchema(z.object({
   username: z.string().min(2).max(50),
+  dob: z
+    .string()
+    .refine(v => v, { message: 'A date of birth is required.' }),
 }))
+
+const placeholder = ref()
 
 const form = useForm({
   validationSchema: formSchema,
+})
+
+const value = computed({
+  get: () => values.dob ? parseDate(values.dob) : undefined,
+  set: val => val,
 })
 
 const onSubmit = form.handleSubmit((values) => {
