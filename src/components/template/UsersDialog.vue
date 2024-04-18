@@ -9,9 +9,11 @@
       <DialogHeader class="w-full bg-azure-radiance rounded-lg p-4">
         <DialogTitle class="font-medium text-lg text-white">Novo Usuário</DialogTitle>
       </DialogHeader>
-      <span class="text-black text-lg font-medium">Dados Básicos</span>
-      <hr>
-      <form @submit="onSubmit">
+      <form @submit="onSubmit" class="flex flex-col gap-4">
+        <div>
+          <span class="text-black text-lg font-medium">Dados Básicos</span>
+          <hr class="mt-2">
+        </div>
         <div class="flex gap-24 mb-6">
           <div class="relative">
             <div class="w-64 h-64 bg-gray-300 rounded-full"></div>
