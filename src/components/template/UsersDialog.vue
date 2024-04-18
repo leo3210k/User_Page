@@ -5,11 +5,11 @@
         +
       </Button>
     </DialogTrigger>
-    <DialogContent class="sm:max-w-md p-0">
-      <DialogHeader class="w-full p-4 bg-azure-radiance-darker rounded-lg">
-        <DialogTitle>Novo Usuário</DialogTitle>
+    <DialogContent class="sm:max-w-md p-4">
+      <DialogHeader class="w-full bg-azure-radiance-darker rounded-lg p-4">
+        <DialogTitle class="font-medium text-lg text-white">Novo Usuário</DialogTitle>
       </DialogHeader>
-      <span>Dados Básicos</span>
+      <span class="text-black text-lg font-medium">Dados Básicos</span>
       <hr>
       <form @submit="onSubmit">
         <FormField v-slot="{ componentField }" name="username">
