@@ -5,14 +5,14 @@
         +
       </Button>
     </DialogTrigger>
-    <DialogContent class="sm:max-w-md p-4">
+    <DialogContent class="p-4">
       <DialogHeader class="w-full bg-azure-radiance rounded-lg p-4">
         <DialogTitle class="font-medium text-lg text-white">Novo Usuário</DialogTitle>
       </DialogHeader>
       <span class="text-black text-lg font-medium">Dados Básicos</span>
       <hr>
       <form @submit="onSubmit">
-        <div class="flex gap-10">
+        <div class="flex gap-24">
           <div class="relative">
             <div class="w-52 h-52 bg-gray-300 rounded-full"></div>
             <div class="absolute right-0 bottom-1 w-20 h-20 flex justify-center items-center bg-azure-radiance rounded-full">
