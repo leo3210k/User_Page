@@ -5,8 +5,8 @@
         +
       </Button>
     </DialogTrigger>
-    <DialogContent class="sm:max-w-md">
-      <DialogHeader class="w-full p-4 bg-azure-radiance-darker">
+    <DialogContent class="sm:max-w-md p-0">
+      <DialogHeader class="w-full p-4 bg-azure-radiance-darker rounded-lg">
         <DialogTitle>Novo Usuário</DialogTitle>
       </DialogHeader>
     </DialogContent>
