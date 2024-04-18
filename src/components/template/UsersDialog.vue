@@ -30,7 +30,7 @@
   </Dialog>
 </template>
 
-<script>
+<script setup>
 import { Button } from '@/components/ui/button'
 import {
   Dialog,
@@ -41,10 +41,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
-
-export default {
-
-}
 </script>
 
 <style>
