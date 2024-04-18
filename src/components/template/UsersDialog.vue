@@ -6,16 +6,18 @@
       </Button>
     </DialogTrigger>
     <DialogContent class="sm:max-w-md p-4">
-      <DialogHeader class="w-full bg-azure-radiance-darker rounded-lg p-4">
+      <DialogHeader class="w-full bg-azure-radiance rounded-lg p-4">
         <DialogTitle class="font-medium text-lg text-white">Novo Usuário</DialogTitle>
       </DialogHeader>
       <span class="text-black text-lg font-medium">Dados Básicos</span>
       <hr>
       <form @submit="onSubmit">
-        <div class="flex">
-          <div>
-            <div></div>
-            <img src="" alt="">
+        <div class="flex gap-10">
+          <div class="relative">
+            <div class="w-52 h-52 bg-gray-300 rounded-full"></div>
+            <div class="absolute right-0 bottom-1 w-20 h-20 flex justify-center items-center bg-azure-radiance rounded-full">
+              <img :src="cameraSrc" class="w-10 h-10" :alt="camera">
+            </div>
           </div>
           <div>
             <FormField v-slot="{ componentField }" name="username">
@@ -63,6 +65,9 @@ import { Input } from '@/components/ui/input'
 import { toTypedSchema } from '@vee-validate/zod'
 import * as z from 'zod'
 import { useForm } from 'vee-validate'
+import camera from '@/assets/svg/users-dialog/camera.svg'
+
+const cameraSrc = camera
 
 const formSchema = toTypedSchema(z.object({
   username: z.string().min(2).max(50),
