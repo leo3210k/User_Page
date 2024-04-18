@@ -12,7 +12,7 @@
       <span class="text-black text-lg font-medium">Dados Básicos</span>
       <hr>
       <form @submit="onSubmit">
-        <div class="flex gap-24">
+        <div class="flex gap-24 mb-6">
           <div class="relative">
             <div class="w-72 h-72 bg-gray-300 rounded-full"></div>
             <div class="absolute right-0 bottom-1 w-20 h-20 flex justify-center items-center bg-azure-radiance-darker rounded-full">
@@ -24,7 +24,7 @@
               <FormItem>
                 <FormLabel class="text-gray-500">Nome</FormLabel>
                 <FormControl>
-                  <Input type="text" class="w-full" v-bind="componentField" />
+                  <Input type="text" class="w-full h-14" v-bind="componentField" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -32,6 +32,27 @@
             <FormField v-slot="{ componentField }" name="mother_name">
               <FormItem>
                 <FormLabel class="text-gray-500">Nome da Mãe</FormLabel>
+                <FormControl>
+                  <Input type="text" class="w-full h-14" v-bind="componentField" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            </FormField>
+            <FormField v-slot="{ componentField }" name="father_name">
+              <FormItem>
+                <FormLabel class="text-gray-500">Nome do Pai</FormLabel>
+                <FormControl>
+                  <Input type="text" class="w-full h-14" v-bind="componentField" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            </FormField>
+          </div>
+        </div>
+        <div class="w-full flex justify-between gap-4">
+          <FormField v-slot="{ componentField }" name="father_name">
+              <FormItem>
+                <FormLabel class="text-gray-500">Nome do Pai</FormLabel>
                 <FormControl>
                   <Input type="text" class="w-full" v-bind="componentField" />
                 </FormControl>
@@ -47,7 +68,24 @@
                 <FormMessage />
               </FormItem>
             </FormField>
-          </div>
+            <FormField v-slot="{ componentField }" name="father_name">
+              <FormItem>
+                <FormLabel class="text-gray-500">Nome do Pai</FormLabel>
+                <FormControl>
+                  <Input type="text" class="w-full" v-bind="componentField" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            </FormField>
+            <FormField v-slot="{ componentField }" name="father_name">
+              <FormItem>
+                <FormLabel class="text-gray-500">Nome do Pai</FormLabel>
+                <FormControl>
+                  <Input type="text" class="w-full" v-bind="componentField" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            </FormField>
         </div>
         <Button type="submit">
           Submit
