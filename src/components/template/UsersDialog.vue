@@ -9,7 +9,23 @@
       <DialogHeader class="w-full p-4 bg-azure-radiance-darker rounded-lg">
         <DialogTitle>Novo Usuário</DialogTitle>
       </DialogHeader>
-      
+      <form @submit="onSubmit">
+        <FormField v-slot="{ componentField }" name="username">
+          <FormItem>
+            <FormLabel>Username</FormLabel>
+            <FormControl>
+              <Input type="text" placeholder="shadcn" v-bind="componentField" />
+            </FormControl>
+            <FormDescription>
+              This is your public display name.
+            </FormDescription>
+            <FormMessage />
+          </FormItem>
+        </FormField>
+        <Button type="submit">
+          Submit
+        </Button>
+      </form>
     </DialogContent>
   </Dialog>
 </template>
