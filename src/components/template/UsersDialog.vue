@@ -522,8 +522,8 @@
               </FormItem>
             </FormField>
           </div>
-          <Button type="submit">
-            Submit
+          <Button class="text-lg self-end bg-azure-radiance-darker px-10 py-6" type="submit">
+            Salvar
           </Button>
         </form>
       </DialogScrollContent>
