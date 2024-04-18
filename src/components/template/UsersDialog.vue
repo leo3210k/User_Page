@@ -24,7 +24,7 @@
               <FormItem>
                 <FormLabel class="text-gray-500">Nome</FormLabel>
                 <FormControl>
-                  <Input type="text" class="w-full h-12" v-bind="componentField" />
+                  <Input type="text" class="w-full h-12 text-black" v-bind="componentField" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -33,7 +33,7 @@
               <FormItem>
                 <FormLabel class="text-gray-500">Nome da Mãe</FormLabel>
                 <FormControl>
-                  <Input type="text" class="w-full h-12" v-bind="componentField" />
+                  <Input type="text" class="w-full h-12 text-black" v-bind="componentField" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -42,7 +42,7 @@
               <FormItem>
                 <FormLabel class="text-gray-500">Nome do Pai</FormLabel>
                 <FormControl>
-                  <Input type="text" class="w-full h-12" v-bind="componentField" />
+                  <Input type="text" class="w-full h-12 text-black" v-bind="componentField" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
