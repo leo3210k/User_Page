@@ -30,9 +30,13 @@ export default {
   },
   methods: {
     getUsers() {
-        axios.get(`${this.url}/a/colaborador/?text=`).then(res => this.stat = res.data)
+      axios.get(`${this.url}/a/colaborador/?text=`).then(res => this.stat = res.data)
     }
   },
+  mounted() {
+    this.getUsers()
+    console.log(users)
+  }
 }
 </script>
 
