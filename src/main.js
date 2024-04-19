@@ -20,10 +20,10 @@ const router = createRouter({
   routes,
 })
 
-router.beforeEach((to, from, next) => {
-  const user = localStorage.getItem('user')
-  // if(!user) router.push('/login')
-})
+// router.beforeEach((to, from, next) => {
+//   const user = localStorage.getItem('user')
+//   // if(!user) router.push('/login')
+// })
 
 const store = createStore({
   state: {
