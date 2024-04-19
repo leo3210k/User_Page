@@ -66,7 +66,7 @@ const form = useForm({
 })
 
 const onSubmit = form.handleSubmit((values) => {
-  axios.post(`${this.url}/a/colaborador/?text=`, values).then(res => console.log(res.data))
+  axios.post(url, values).then(res => console.log(res.data))
   console.log('Form submitted!', values)
 })
 </script>
