@@ -211,36 +211,36 @@
           <div class="flex justify-between">
             <div class="w-5/12 flex gap-2">
               <FormField v-slot="{ componentField }" name="start_time">
-                <FormItem class="w-full">
+                <FormItem class="w-full flex flex-col">
                   <FormLabel class="text-gray-500">Inicio</FormLabel>
                   <FormControl>
-                    <input type="time" id="appt" v-model="date" min="09:00" max="18:00" v-bind="componentField" />
+                    <input type="time" class="h-12 border-b-2 text-black" min="09:00" max="18:00" v-bind="componentField" />
                   </FormControl>
                 </FormItem>
               </FormField>
               <FormField v-slot="{ componentField }" name="end_time">
-                <FormItem class="w-full">
+                <FormItem class="w-full flex flex-col">
                   <FormLabel class="text-gray-500">Fim</FormLabel>
                   <FormControl>
-                    <input type="time" id="appt" v-model="date" min="09:00" max="18:00" v-bind="componentField" />
+                    <input type="time" class="h-12 border-b-2 text-black" min="09:00" max="18:00" v-bind="componentField" />
                   </FormControl>
                 </FormItem>
               </FormField>
             </div>
             <div class="w-5/12 flex gap-2">
               <FormField v-slot="{ componentField }" name="saturday_start_time">
-                <FormItem class="w-full">
+                <FormItem class="w-full flex flex-col">
                   <FormLabel class="text-gray-500">Inicio</FormLabel>
                   <FormControl>
-                    <input type="time" id="appt" v-model="date" min="09:00" max="18:00" v-bind="componentField" />
+                    <input type="time" class="h-12 border-b-2 text-black" min="09:00" max="18:00" v-bind="componentField" />
                   </FormControl>
                 </FormItem>
               </FormField>
               <FormField v-slot="{ componentField }" name="saturday_end_time">
-                <FormItem class="w-full">
+                <FormItem class="w-full flex flex-col">
                   <FormLabel class="text-gray-500">Fim</FormLabel>
                   <FormControl>
-                    <input type="time" id="appt" v-model="date" min="09:00" max="18:00" v-bind="componentField" />
+                    <input type="time" class="h-12 border-b-2 text-black" min="09:00" max="18:00" v-bind="componentField" />
                   </FormControl>
                 </FormItem>
               </FormField>
