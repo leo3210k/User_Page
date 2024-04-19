@@ -218,7 +218,7 @@
                       <template #action-buttons>
                         <p class="bg-azure-radiance-darker text-white p-2 rounded-md cursor-pointer" @click="selectDate">Selecionar</p>
                       </template>
-                    </VueDatePicker>  
+                    </VueDatePicker>
                   </FormControl>
                 </FormItem>
               </FormField>
@@ -244,7 +244,7 @@
                       <template #action-buttons>
                         <p class="bg-azure-radiance-darker text-white p-2 rounded-md cursor-pointer" @click="selectDate">Selecionar</p>
                       </template>
-                    </VueDatePicker>  
+                    </VueDatePicker>
                   </FormControl>
                 </FormItem>
               </FormField>
@@ -522,18 +522,18 @@
               </FormItem>
             </FormField>
           </div>
-          <DialogFooter>
+          <!-- <DialogFooter>
             <DialogClose as-child>
               <Button class="text-lg self-end bg-silver hover:bg-silver hover:opacity-85 text-black/30 rounded-md px-10 py-6" type="submit">
                 Cancelar
-              </Button>
-            </DialogClose>
-            <!-- <DialogClose as-child> -->
-              <Button class="text-lg self-end bg-azure-radiance-darker hover:bg-azure-radiance-darker hover:opacity-85 text-white rounded-md px-10 py-6" type="submit">
-                Salvar
-              </Button>
+              </Button> -->
             <!-- </DialogClose> -->
-          </DialogFooter>
+            <!-- <DialogClose as-child> -->
+              <button class="text-lg self-end bg-azure-radiance-darker hover:bg-azure-radiance-darker hover:opacity-85 text-white rounded-md px-10 py-6" type="submit">
+                Salvar
+              </button>
+            <!-- </DialogClose> -->
+          <!-- </DialogFooter> -->
         </form>
       </DialogScrollContent>
     </DialogContent>
@@ -611,6 +611,7 @@ const value = computed({
 
 const onSubmit = handleSubmit((values) => {
   console.log(values)
+  console.log(date)
 })
 </script>
 
