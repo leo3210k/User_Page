@@ -10,8 +10,8 @@ import Home from '@/components/template/Home.vue'
 import Users from '@/components/template/Users.vue'
 
 const routes = [
-  { name: 'login', path: '/login', component: Login },
-  { name: 'home', path: '/', component: Home },
+  { name: 'login', path: '/', component: Login },
+  { name: 'home', path: '/home', component: Home },
   { name: 'users', path: '/users', component: Users },
 ]
 

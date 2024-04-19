@@ -3,7 +3,7 @@
     <img @click="toggleMenu" :src="image_src" class="w-10 h-10 cursor-pointer" alt="menu-icon">
     <div class="flex justify-between text-2xl text-white font-black capitalize grow">
       <div>
-        <RouterLink to="/">utilitários</RouterLink>
+        <RouterLink to="/home">utilitários</RouterLink>
         /
         <RouterLink to="/users">usuários</RouterLink>
       </div>

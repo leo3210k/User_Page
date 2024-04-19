@@ -74,7 +74,7 @@ const form = useForm({
 const onSubmit = form.handleSubmit((values) => {
   axios.post(url, values)
     .then(res => localStorage.setItem('user', res.data.token))
-    .then(res => router.push({ path: '/' }))
+    .then(res => router.push({ path: '/home' }))
 })
 </script>
 
