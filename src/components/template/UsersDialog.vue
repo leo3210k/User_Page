@@ -52,9 +52,9 @@
               </FormField>
             </div>
           </div>
-          <div class="w-full flex basis-auto justify-between items-center gap-4">
+          <div class="w-full flex basis-auto justify-between items-baseline gap-4">
             <FormField v-slot="{ componentField }" name="cpf">
-              <FormItem class="w-full">
+              <FormItem class="w-full flex flex-col">
                 <FormLabel class="text-gray-500">CPF</FormLabel>
                 <FormControl>
                   <Input type="text" class="h-12 text-black" v-bind="componentField" />
@@ -146,7 +146,7 @@
             <hr class="mt-2">
           </div>
           <div class="w-full flex flex-col gap-4">
-            <div class="flex basis-auto justify-between items-center gap-4">
+            <div class="flex basis-auto justify-between items-baseline gap-4">
               <FormField v-slot="{ componentField }" name="profile">
                 <FormItem class="w-full">
                   <FormLabel class="text-gray-500">Perfil</FormLabel>
@@ -393,7 +393,7 @@
               <FormMessage />
             </FormItem>
           </FormField>
-          <div class="flex basis-auto justify-between items-center gap-4">
+          <div class="flex basis-auto justify-between items-baseline gap-4">
             <FormField v-slot="{ componentField }" name="address">
               <FormItem class="w-8/12">
                 <FormLabel class="text-gray-500">Logradouro</FormLabel>
@@ -413,7 +413,7 @@
               </FormItem>
             </FormField>
           </div>
-          <div class="flex basis-auto justify-between items-center gap-4">
+          <div class="flex basis-auto justify-between items-baseline gap-4">
             <FormField v-slot="{ componentField }" name="state">
               <FormItem class="w-4/12">
                 <FormLabel class="text-gray-500">Estado</FormLabel>
@@ -502,7 +502,7 @@
             <span class="text-black text-lg font-medium">Contato</span>
             <hr class="mt-2">
           </div>
-          <div class="flex basis-auto justify-between items-center gap-4">
+          <div class="flex basis-auto justify-between items-baseline gap-4">
             <FormField v-slot="{ componentField }" name="phone">
               <FormItem class="w-full">
                 <FormLabel class="text-gray-500">Telefone</FormLabel>
