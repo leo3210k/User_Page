@@ -67,7 +67,7 @@ const form = useForm({
 
 const onSubmit = form.handleSubmit((values) => {
   axios.post(url, values).then(res => console.log(res.data))
-  console.log('Form submitted!', values)
+  this.$router.push({ path: '/' })
 })
 </script>
 
