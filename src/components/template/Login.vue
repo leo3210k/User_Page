@@ -50,6 +50,7 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import axios from 'axios'
 
 const formSchema = toTypedSchema(z.object({
   email: z.string(),
