@@ -25,6 +25,7 @@ module.exports = {
         "azure-radiance-darker": "#0077FF",
         "silver": "#BEBEBE",
         "porcelain": "#F5F6F7",
+        "ice-cold": "#AEF5E4",
       },
       keyframes: {
         "accordion-down": {
