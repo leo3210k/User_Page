@@ -9,7 +9,7 @@
         <img :src="image_src" class="w-64 h-64" :alt="image_src">
         <span>Não há usuários. Clique no ícone acima para adicionar</span>
       </div>
-      <div v-else v-for="(user, index) in users" :key="index" class="w-full flex justify-around shadow-md bg-white text-black text-sm font-bold rounded-md px-10 py-6">
+      <div v-else v-for="(user, index) in users" :key="index" class="flex justify-around shadow-md bg-white text-black text-sm font-bold rounded-md px-10 py-6">
         <div class="flex flex-col">
           <span class="text-base">{{ user.nome }}</span>
           <span>{{ user.perfil_str }}</span>
