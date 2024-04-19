@@ -23,7 +23,7 @@
           </FormItem>
         </FormField>
         <div class="flex justify-between items-center mt-10">
-          <a href="" class="text-xl">Esqueceu a senha?</a>
+          <a href="" class="text-xl hover:border-b-2 border-neutral-900">Esqueceu a senha?</a>
           <Button type="submit" class="h-16 px-20 font-bold">
             Entrar
           </Button>
