@@ -1,6 +1,6 @@
 <template>
   <PageModel>
-    <div class="relative flex flex-col m-10 gap-4">
+    <div class="relative flex flex-col m-10 gap-4 overflow-x-hidden	">
       <div class="flex items-center gap-6">
         <span class="text-black text-2xl font-medium">Usuários</span>
         <UsersDialog />
