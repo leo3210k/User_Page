@@ -24,11 +24,13 @@ export default {
   data() {
     return {
       image_src: no_users,
+      users: [],
+      url: 'https://api-manager-test.infog2.com.br.infog2.com.br/'
     };
   },
   methods: {
     getUsers() {
-        axios.get('https://api-manager-test.infog2.com.br.infog2.com.br/a/colaborador/?text=').then(res => this.stat = res.data)
+        axios.get(`${this.url}/a/colaborador/?text=`).then(res => this.stat = res.data)
     }
   },
 }
