@@ -31,7 +31,6 @@
           </div>
         </div>
       </div>
-      {{ console.log(users[1]) }}
     </div>
   </PageModel>
 </template>
