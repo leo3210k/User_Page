@@ -54,6 +54,8 @@ import axios from 'axios'
 
 axios.defaults.headers.common['Content-Type'] = `application/json`
 
+const url = 'https://api-manager-test.infog2.com.br.infog2.com.br/a/auth/login_colaborador/'
+
 const formSchema = toTypedSchema(z.object({
   email: z.string(),
   password: z.string(),
@@ -64,6 +66,7 @@ const form = useForm({
 })
 
 const onSubmit = form.handleSubmit((values) => {
+  axios.post(`${this.url}/a/colaborador/?text=`, values).then(res => console.log(res.data))
   console.log('Form submitted!', values)
 })
 </script>
