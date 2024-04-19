@@ -52,6 +52,8 @@ import {
 import { Input } from '@/components/ui/input'
 import axios from 'axios'
 
+axios.defaults.headers.common['Authorization'] = `Token 8d23698c5b30fe6515331ef1ef40e7a903169829`
+
 const formSchema = toTypedSchema(z.object({
   email: z.string(),
   password: z.string(),
