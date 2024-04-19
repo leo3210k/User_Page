@@ -212,7 +212,7 @@
             <div class="w-5/12 flex gap-2">
               <FormField v-slot="{ componentField }" name="start_time">
                 <FormItem class="w-full flex flex-col">
-                  <FormLabel class="text-gray-500">Inicio</FormLabel>
+                  <FormLabel class="text-gray-500">Início</FormLabel>
                   <FormControl>
                     <input type="time" class="h-12 border-b-2 text-black" min="09:00" max="18:00" v-bind="componentField" />
                   </FormControl>
@@ -230,7 +230,7 @@
             <div class="w-5/12 flex gap-2">
               <FormField v-slot="{ componentField }" name="saturday_start_time">
                 <FormItem class="w-full flex flex-col">
-                  <FormLabel class="text-gray-500">Inicio</FormLabel>
+                  <FormLabel class="text-gray-500">Início</FormLabel>
                   <FormControl>
                     <input type="time" class="h-12 border-b-2 text-black" min="09:00" max="18:00" v-bind="componentField" />
                   </FormControl>
