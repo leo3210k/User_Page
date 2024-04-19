@@ -23,7 +23,7 @@
               </div>
             </div>
             <div class="w-full flex flex-col gap-2">
-              <FormField v-slot="{ componentField }" name="name">
+              <FormField v-slot="{ componentField }" name="username">
                 <FormItem>
                   <FormLabel class="text-gray-500">Nome</FormLabel>
                   <FormControl>
@@ -581,13 +581,6 @@ const df = new DateFormatter('pt-BR', {
   dateStyle: 'long',
 })
 
-const formSchema = toTypedSchema(z.object({
-  username: z.string().min(2).max(50),
-  dob: z
-    .string()
-    .refine(v => v, { message: 'A date of birth is required.' }),
-}))
-
 const placeholder = ref()
 const time = ref();
 const dp = ref();
@@ -598,9 +591,7 @@ const selectDate = () => {
 
 const { handleSubmit, setValues, values } = useForm({
   validationSchema: formSchema,
-  initialValues: {
-
-  },
+  initialValues: {},
 })
 
 const value = computed({
@@ -609,8 +600,74 @@ const value = computed({
 })
 
 const onSubmit = handleSubmit((values) => {
+  console.log(values)
 })
 </script>
+
+<script>
+const formSchema = toTypedSchema(z.object({
+  username: z.string({
+    required_error: "Campo obrigatório",
+  })
+  ,mother_name: z.optional(z.string())
+  ,father_name: z.optional(z.string())
+  ,cpf: z.string({
+    required_error: "Campo obrigatório",
+  })
+  ,marital_status: z.optional(z.string())
+  ,surname: z.optional(z.string())
+  ,profile: z.string({
+    required_error: "Campo obrigatório",
+  })
+  ,function: z.optional(z.string())
+  ,place_of_birth: z.optional(z.string())
+  ,pix: z.optional(z.string())
+  ,start_time: z.optional(z.string())
+  ,end_time: z.optional(z.string())
+  ,saturday_start_time: z.optional(z.string())
+  ,saturday_end_time: z.optional(z.string())
+  ,id: z.optional(z.string())
+  ,UF_identity: z.optional(z.string())
+  ,id_UF: z.optional(z.string())
+  ,voter_title: z.optional(z.string())
+  ,title_section: z.optional(z.string())
+  ,title_zone: z.optional(z.string())
+  ,work_card: z.optional(z.string())
+  ,card_series: z.optional(z.string())
+  ,card_date: z.optional(z.string())
+  ,card_UF: z.optional(z.string())
+  ,CEP: z.string({
+    required_error: "Campo obrigatório",
+  })
+  ,address: z.string({
+    required_error: "Campo obrigatório",
+  })
+  ,address_number: z.string({
+    required_error: "Campo obrigatório",
+  })
+  ,state: z.optional(z.string())
+  ,city: z.string({
+    required_error: "Campo obrigatório",
+  })
+  ,neighborhood: z.string({
+    required_error: "Campo obrigatório",
+  })
+  ,reference: z.optional(z.string())
+  ,complement: z.optional(z.string())
+  ,phone: z.string({
+    required_error: "Campo obrigatório",
+  })
+  ,email: z.string({
+    required_error: "Campo obrigatório",
+  })
+  ,dob: z
+    .string({
+      required_error: "Campo obrigatório",
+    })
+    .refine(v => v, { message: 'A date of birth is required.' }),
+}))
+</script>
+
 
 <style>
 
