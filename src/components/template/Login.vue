@@ -8,7 +8,7 @@
           <FormItem>
             <FormLabel class="font-black">Email</FormLabel>
             <FormControl>
-              <Input type="text" placeholder="shadcn" v-bind="componentField" class="w-[30rem] h-12"/>
+              <Input type="text" v-bind="componentField" class="w-[30rem] h-12"/>
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -17,7 +17,7 @@
           <FormItem>
             <FormLabel class="font-black">Senha</FormLabel>
             <FormControl>
-              <Input type="text" placeholder="shadcn" v-bind="componentField" class="w-[30rem] h-12"/>
+              <Input type="text" v-bind="componentField" class="w-[30rem] h-12"/>
             </FormControl>
             <FormMessage />
           </FormItem>
