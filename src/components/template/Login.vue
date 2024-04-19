@@ -4,7 +4,7 @@
     <div class="relative w-5/12 flex flex-col items-center text-4xl font-bold text-black mx-auto mt-48">
       <h1 class="mb-16">Login</h1>
       <form @submit="onSubmit">
-        <FormField v-slot="{ componentField }" name="email">
+        <FormField v-slot="{ componentField }" name="username">
           <FormItem>
             <FormLabel class="font-black">Email</FormLabel>
             <FormControl>
@@ -57,7 +57,7 @@ axios.defaults.headers.common['Content-Type'] = `application/json`
 const url = 'https://api-manager-test.infog2.com.br.infog2.com.br/a/auth/login_colaborador/'
 
 const formSchema = toTypedSchema(z.object({
-  email: z.string(),
+  username: z.string(),
   password: z.string(),
 }))
 
