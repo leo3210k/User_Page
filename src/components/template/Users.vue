@@ -5,7 +5,7 @@
         <span class="text-black text-2xl font-medium">Usuários</span>
         <UsersDialog />
       </div>
-      <div v-if="testes.length==0" class="absolute inset-1 flex flex-col justify-center items-center gap-6 text-gray-400">
+      <div v-if="users.length==0" class="absolute inset-1 flex flex-col justify-center items-center gap-6 text-gray-400">
         <img :src="image_src" class="w-64 h-64" :alt="image_src">
         <span>Não há usuários. Clique no ícone acima para adicionar</span>
       </div>
@@ -52,7 +52,6 @@ export default {
     return {
       image_src: no_users,
       users: {},
-      testes: ['1', '2', '3', '4'],
       url: 'https://api-manager-test.infog2.com.br.infog2.com.br/',
       shopSrc: shop,
       locationSrc: location,
