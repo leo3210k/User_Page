@@ -12,6 +12,7 @@
     "@vee-validate/zod": "^4.12.6",
     "@vuepic/vue-datepicker": "^8.4.0",
     "@vueuse/core": "^10.9.0",
+    "axios": "^1.6.8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-vue-next": "^0.368.0",
