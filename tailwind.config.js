@@ -26,6 +26,7 @@ module.exports = {
         "silver": "#BEBEBE",
         "porcelain": "#F5F6F7",
         "ice-cold": "#AEF5E4",
+        "observatory": "#038868",
       },
       keyframes: {
         "accordion-down": {
