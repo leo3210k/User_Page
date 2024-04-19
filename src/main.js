@@ -10,9 +10,9 @@ import Home from '@/components/template/Home.vue'
 import Users from '@/components/template/Users.vue'
 
 const routes = [
-  { path: '/login', component: Login },
-  { path: '/', component: Home },
-  { path: '/users', component: Users },
+  { name: 'login', path: '/login', component: Login },
+  { name: 'home', path: '/', component: Home },
+  { name: 'users', path: '/users', component: Users },
 ]
 
 const router = createRouter({
@@ -22,7 +22,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   const user = localStorage.getItem('user')
-  next()
+  // if(!user) router.push('/login')
 })
 
 const store = createStore({
