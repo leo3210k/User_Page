@@ -524,6 +524,11 @@
           </div>
           <DialogFooter>
             <DialogClose as-child>
+              <Button class="text-lg self-end bg-silver hover:bg-silver hover:opacity-85 text-black/30 rounded-md px-10 py-6" type="submit">
+                Cancelar
+              </Button>
+            </DialogClose>
+            <DialogClose as-child>
               <Button class="text-lg self-end bg-azure-radiance-darker hover:bg-azure-radiance-darker hover:opacity-85 text-white rounded-md px-10 py-6" type="submit">
                 Salvar
               </Button>
