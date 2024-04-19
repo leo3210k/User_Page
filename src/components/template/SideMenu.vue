@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-between items-center bg-azure-radiance py-6">
+  <div :class="{ inactive: !isMenuVisible }" class="flex flex-col justify-between items-center bg-azure-radiance py-6">
     <div class="flex flex-col items-center gap-10">
       <img v-for="(image_src, index) in images_src" :key="index" :src="image_src" :alt="image_src"
       class="w-10 h-10">
@@ -16,9 +16,11 @@ import fourth_icon from '@/assets/svg/sidebar/fourthIcon.svg'
 import fifth_icon from '@/assets/svg/sidebar/fifthIcon.svg'
 import sixth_icon from '@/assets/svg/sidebar/sixthIcon.svg'
 import logo from '@/assets/svg/sidebar/logo.svg'
+import { mapState } from 'vuex'
 
 export default {
   name: "SideMenu",
+  computed: mapState(['isMenuVisible']),
   data() {
     return {
       images_src: [

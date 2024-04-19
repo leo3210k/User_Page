@@ -3,6 +3,7 @@ import './style.css'
 import App from './App.vue'
 
 import { createWebHistory, createRouter } from 'vue-router'
+import { createStore } from 'vuex'
 
 import Login from '@/components/template/Login.vue'
 import Home from '@/components/template/Home.vue'
@@ -19,4 +20,15 @@ const router = createRouter({
   routes,
 })
 
-createApp(App).use(router).mount('#app')
+router.beforeEach((to, from, next) => {
+  const user = localStorage.getItem('user')
+  next()
+})
+
+const store = createStore({
+  state: {
+    isMenuVisible: true,
+  },
+})
+
+createApp(App).use(store).use(router).mount('#app')

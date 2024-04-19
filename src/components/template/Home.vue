@@ -1,6 +1,6 @@
 <template>
   <PageModel>
-    <div class="h-40 flex flex-wrap gap-6 m-32">
+    <div class="h-40 flex flex-wrap gap-6 m-32" :class="isMenuVisible ? '' : 'col-span-2' ">
       <div v-for="(image, index) in images" :key="index">
         <RouterLink to="/users" v-if="image.label=='Usuários'" class="w-36 h-36 flex flex-col gap-3 justify-center items-center bg-azure-radiance-darker rounded-lg">
           <img :src="image.src" :alt="image.src" class="w-14 h-14">
@@ -27,11 +27,12 @@ import reports from '@/assets/svg/home/reports.svg'
 import segments from '@/assets/svg/home/segments.svg'
 import users from '@/assets/svg/home/users.svg'
 import versions from '@/assets/svg/home/versions.svg'
-
+import { mapState } from 'vuex'
 
 export default {
   name: "Home",
   components: { PageModel },
+  computed: mapState(['isMenuVisible']),
   data() {
     return {
       images: [
