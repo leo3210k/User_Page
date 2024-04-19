@@ -1,5 +1,5 @@
 <template>
-  <div class="h-svh grid grid-rows-[5rem_1fr] grid-cols-[5.5rem_1fr]">
+  <div class="bg-porcelain grid grid-rows-[5rem_1fr] grid-cols-[5.5rem_1fr]">
     <Header />
     <SideMenu />
     <slot></slot>
