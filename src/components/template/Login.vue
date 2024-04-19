@@ -17,7 +17,7 @@
           <FormItem>
             <FormLabel class="font-black">Senha</FormLabel>
             <FormControl>
-              <Input type="text" v-bind="componentField" class="w-[30rem] h-12"/>
+              <Input type="password" v-bind="componentField" class="w-[30rem] h-12"/>
             </FormControl>
             <FormMessage />
           </FormItem>
