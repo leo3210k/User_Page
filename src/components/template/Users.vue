@@ -25,7 +25,12 @@ export default {
     return {
       image_src: no_users,
     };
-  }
+  },
+  methods: {
+    getUsers() {
+        axios.get('https://api-manager-test.infog2.com.br.infog2.com.br/a/colaborador/?text=').then(res => this.stat = res.data)
+    }
+  },
 }
 </script>
 
