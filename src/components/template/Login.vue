@@ -50,15 +50,21 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import { useRoute, useRouter } from 'vue-router'
 import axios from 'axios'
 
 axios.defaults.headers.common['Content-Type'] = `application/json`
 
 const url = 'https://api-manager-test.infog2.com.br.infog2.com.br/a/auth/login_colaborador/'
+const router = useRouter()
 
 const formSchema = toTypedSchema(z.object({
-  username: z.string(),
-  password: z.string(),
+  username: z.string({
+    required_error: "Digite um e-mail",
+  }),
+  password: z.string({
+    required_error: "Digite uma senha",
+  }),
 }))
 
 const form = useForm({
@@ -67,7 +73,7 @@ const form = useForm({
 
 const onSubmit = form.handleSubmit((values) => {
   axios.post(url, values).then(res => console.log(res.data))
-  this.$router.push({ path: '/' })
+  router.push({ path: '/' })
 })
 </script>
 
