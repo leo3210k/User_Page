@@ -522,9 +522,13 @@
               </FormItem>
             </FormField>
           </div>
-          <Button class="text-lg self-end bg-azure-radiance-darker hover:bg-azure-radiance-darker hover:opacity-85 text-white rounded-md px-10 py-6" type="submit">
-            Salvar
-          </Button>
+          <DialogFooter>
+            <DialogClose as-child>
+              <Button class="text-lg self-end bg-azure-radiance-darker hover:bg-azure-radiance-darker hover:opacity-85 text-white rounded-md px-10 py-6" type="submit">
+                Salvar
+              </Button>
+            </DialogClose>
+          </DialogFooter>
         </form>
       </DialogScrollContent>
     </DialogContent>
@@ -535,6 +539,7 @@
 import { Button } from '@/components/ui/button'
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
