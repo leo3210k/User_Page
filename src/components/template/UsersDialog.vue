@@ -54,7 +54,7 @@
           </div>
           <div class="w-full flex basis-auto justify-between items-baseline gap-4">
             <FormField v-slot="{ componentField }" name="cpf">
-              <FormItem class="w-full flex flex-col">
+              <FormItem class="w-full">
                 <FormLabel class="text-gray-500">CPF</FormLabel>
                 <FormControl>
                   <Input type="text" class="h-12 text-black" v-bind="componentField" />
@@ -528,11 +528,11 @@
                 Cancelar
               </Button>
             </DialogClose>
-            <DialogClose as-child>
+            <!-- <DialogClose as-child> -->
               <Button class="text-lg self-end bg-azure-radiance-darker hover:bg-azure-radiance-darker hover:opacity-85 text-white rounded-md px-10 py-6" type="submit">
                 Salvar
               </Button>
-            </DialogClose>
+            <!-- </DialogClose> -->
           </DialogFooter>
         </form>
       </DialogScrollContent>
@@ -583,7 +583,7 @@ import { Input } from '@/components/ui/input'
 import { cn } from '@/lib/utils'
 import VueDatePicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css'
-import camera from '@/assets/svg/users-dialog/camera.svg'
+import camera from '@/assets/svg/users/camera.svg'
 
 const cameraSrc = camera
 
