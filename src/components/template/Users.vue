@@ -17,6 +17,7 @@
 import PageModel from '@/components/template/PageModel.vue'
 import UsersDialog from '@/components/template/UsersDialog.vue'
 import no_users from '@/assets/images/no-users.png'
+import axios from 'axios'
 
 export default {
   name: "Users",
