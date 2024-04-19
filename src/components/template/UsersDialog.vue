@@ -98,7 +98,7 @@
                       <Button
                         class="w-full h-12 bg-white text-black hover:bg-white border"
                       >
-                        <span>{{ value ? df.format(toDate(value)) : "Pick a date" }}</span>
+                        <span>{{ value ? df.format(toDate(value)) : "Selecione uma data" }}</span>
                         <CalendarIcon class="ms-auto h-4 w-4 opacity-50" />
                       </Button>
                       <input hidden>
