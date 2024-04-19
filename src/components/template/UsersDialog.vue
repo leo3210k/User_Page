@@ -214,11 +214,7 @@
                 <FormItem class="w-full">
                   <FormLabel class="text-gray-500">Inicio</FormLabel>
                   <FormControl>
-                    <VueDatePicker v-model="date" v-bind="componentField" time-picker disable-time-range-validation ref="dp" placeholder="Selecione a Hora">
-                      <template #action-buttons>
-                        <p class="bg-azure-radiance-darker text-white p-2 rounded-md cursor-pointer" @click="selectDate">Selecionar</p>
-                      </template>
-                    </VueDatePicker>
+                    <input type="time" id="appt" v-model="date" min="09:00" max="18:00" v-bind="componentField" />
                   </FormControl>
                 </FormItem>
               </FormField>
@@ -226,11 +222,7 @@
                 <FormItem class="w-full">
                   <FormLabel class="text-gray-500">Fim</FormLabel>
                   <FormControl>
-                    <VueDatePicker v-model="date" v-bind="componentField" time-picker disable-time-range-validation ref="dp" placeholder="Selecione a Hora">
-                      <template #action-buttons>
-                        <p class="bg-azure-radiance-darker text-white p-2 rounded-md cursor-pointer" @click="selectDate">Selecionar</p>
-                      </template>
-                    </VueDatePicker>
+                    <input type="time" id="appt" v-model="date" min="09:00" max="18:00" v-bind="componentField" />
                   </FormControl>
                 </FormItem>
               </FormField>
@@ -240,11 +232,7 @@
                 <FormItem class="w-full">
                   <FormLabel class="text-gray-500">Inicio</FormLabel>
                   <FormControl>
-                    <VueDatePicker v-model="date" v-bind="componentField" time-picker disable-time-range-validation ref="dp" placeholder="Selecione a Hora">
-                      <template #action-buttons>
-                        <p class="bg-azure-radiance-darker text-white p-2 rounded-md cursor-pointer" @click="selectDate">Selecionar</p>
-                      </template>
-                    </VueDatePicker>
+                    <input type="time" id="appt" v-model="date" min="09:00" max="18:00" v-bind="componentField" />
                   </FormControl>
                 </FormItem>
               </FormField>
@@ -252,11 +240,7 @@
                 <FormItem class="w-full">
                   <FormLabel class="text-gray-500">Fim</FormLabel>
                   <FormControl>
-                    <VueDatePicker v-model="date" v-bind="componentField" time-picker disable-time-range-validation ref="dp" placeholder="Selecione a Hora">
-                      <template #action-buttons>
-                        <p class="bg-azure-radiance-darker text-white p-2 rounded-md cursor-pointer" @click="selectDate">Selecionar</p>
-                      </template>
-                    </VueDatePicker>
+                    <input type="time" id="appt" v-model="date" min="09:00" max="18:00" v-bind="componentField" />
                   </FormControl>
                 </FormItem>
               </FormField>
