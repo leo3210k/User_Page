@@ -19,24 +19,27 @@ import UsersDialog from '@/components/template/UsersDialog.vue'
 import no_users from '@/assets/images/no-users.png'
 import axios from 'axios'
 
+axios.defaults.headers.common['Authorization'] = `Token 8d23698c5b30fe6515331ef1ef40e7a903169829`
+
 export default {
   name: "Users",
   components: { PageModel, UsersDialog },
   data() {
     return {
       image_src: no_users,
+      basicAuth: "8d23698c5b30fe6515331ef1ef40e7a903169829",
       users: [],
       url: 'https://api-manager-test.infog2.com.br.infog2.com.br/'
     };
   },
   methods: {
     getUsers() {
-      axios.get(`${this.url}/a/colaborador/?text=`).then(res => this.stat = res.data)
+      axios.get(`${this.url}/a/colaborador/?text=`).then(res => this.users = res.data)
     }
   },
   mounted() {
     this.getUsers()
-    console.log(users)
+    console.log(this.users)
   }
 }
 </script>
